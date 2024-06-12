@@ -1,0 +1,10 @@
+@import '../../styles/utils/variables.scss';
+.Stars{
+   margin-top: 2vh;
+   height: 3vh;
+   @media (max-width: $breakpoint-desktop) {
+      width: 27px;
+      height: 27px;
+      margin-top: auto;
+   }
+}

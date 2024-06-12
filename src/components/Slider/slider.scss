@@ -1,0 +1,44 @@
+@import '../../styles/utils/variables.scss';
+
+.sliderContainer {
+   margin: 3vh 0 3vh 0;
+   height: 39vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+
+   .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+   }
+
+   .arrowLeft {
+      position: absolute;
+      cursor: pointer;
+      right: 2%;
+
+      @media (max-width: $breakpoint-desktop) {
+         width: 7%;
+      }
+   }
+
+   .arrowRight {
+      position: absolute;
+      cursor: pointer;
+      left: 2%;
+
+      @media (max-width: $breakpoint-desktop) {
+         width: 7%;
+      }
+   }
+
+   .count {
+      position: absolute;
+      bottom: 0%;
+      color: $tertiary-color;
+      font-weight: 700;
+   }
+}

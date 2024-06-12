@@ -1,0 +1,35 @@
+@import '../../styles/utils/variables.scss';
+
+.footerContainer {
+   width: auto;
+   background-color: black;
+   height: 17vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 66px 7vw 30px 7vw;
+
+   @media (max-width: $breakpoint-desktop) {
+      height: 15vh;
+   }
+      .textContain {
+         width: 513px;
+         @media (max-width: $breakpoint-desktop) {
+            width: 134px;
+         }
+      }
+
+   .text {
+      color: white;
+      font-size: 24px;
+      width: 513px;
+      text-wrap: balance;
+      text-align: center;
+
+      @media (max-width: $breakpoint-desktop) {
+         font-size: 12px;
+         width: 134px;
+      }
+   }
+}

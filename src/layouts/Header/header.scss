@@ -1,0 +1,35 @@
+@import '../../styles/utils/variables.scss';
+.headerContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 30px 7vw 0 7vw;
+   height: 100%;
+   @media (max-width: $breakpoint-desktop) {
+     margin: 30px 2vw 0 2vw;
+   }
+
+}
+
+.headerLink {
+   color: black;
+   text-decoration: none;
+   font-size: 24px;
+   padding: 0 0 0 60px;
+   @media (max-width: $breakpoint-desktop) {
+      font-size: 12px;
+      padding: 0 0 0 10px;
+   }
+}
+
+.headerLink.active:hover {
+   filter: brightness(0.9);
+}
+
+.headerLink.active {
+   text-decoration: underline;
+}
+
+.headerLogo {
+   height: 68px;
+}

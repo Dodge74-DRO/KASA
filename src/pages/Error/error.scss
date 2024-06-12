@@ -1,0 +1,48 @@
+@import '../../styles/utils/variables.scss';
+
+.errorContainer {
+  height: 72vh;
+  margin: 0px 7vw 0 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FF6060;
+  @media (max-width: $breakpoint-desktop) {
+    height: 54vh;
+  }
+}
+
+.TitleError {
+  font-size: 288px;
+  font-weight: 900;
+  margin: 0;
+
+  @media (max-width: $breakpoint-desktop) {
+    font-size: 96px;
+  }
+}
+
+.TextError {
+  font-size: 36px;
+  margin: 0;
+
+  @media (max-width: $breakpoint-desktop) {
+    font-size: 18px;
+  }
+}
+
+.LinkError {
+  color: black;
+  font-size: 18px;
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+  text-decoration: underline;
+
+  @media (max-width: $breakpoint-desktop) {
+    margin-top: 7vh;
+    font-size: 14px;
+    margin-bottom: 0vh;
+  }
+}

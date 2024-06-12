@@ -1,0 +1,81 @@
+@import '../../styles/utils/variables.scss';
+@import '../../styles/utils/mixins';
+
+.logementCollapse{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    margin: 0 0vw 6vh 0vw;
+    &Container{
+        width: 50%;
+        @media (max-width: $breakpoint-desktop) {
+            width: 100%;
+        }
+    }
+    @media (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+        &_item{
+            width: 100%;
+        }    
+    }
+}
+
+.collapse{
+    margin: 0 auto;
+    font-size: inherit;
+    &_title{
+        @include flex(row, space-between, center);
+        height: 4vh;
+        background-color: $primary-color;
+        color: $tertiary-color;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-bottom: 0;
+            @media (max-width: $breakpoint-desktop) {
+                height: 3vh;
+            }
+            .arrow{
+            transition: all 0.2s ease-in-out;
+            @media (max-width: $breakpoint-desktop) {
+            width: 12px;     
+            }
+        }
+        .arrow_up{
+            transform: rotate(0deg);
+        }
+        .arrow_down{
+            transform: rotate(180deg);
+        }
+    }
+    &_content{
+        border-radius: 10px 10px 10px 10px;
+        background-color: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        padding: 15px;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: $quaternary-color;
+        transition: visibility 0.5s ease-in-out,
+                    opacity 0.5s ease-in-out,
+                    height 0.2s ease-in-out;
+        p {
+           margin:0;
+        }
+    }
+    &_content_hidden{
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+}
+

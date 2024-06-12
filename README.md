@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+2024-05
+VS : 1.89.1  Nodejs : 18.18.2
+REACT : 18.3.1
+
+LA POLICE MONTSERRAT est déclarer dans le fichier /public/index.html

@@ -1,0 +1,98 @@
+@import '../../styles/utils/variables.scss';
+
+.logementContainer {
+   color: $secondary-color;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 40px;
+   @media (max-width: $breakpoint-desktop) {
+      margin-bottom: 20px;
+      flex-direction: column;
+   }
+
+   .Infos {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: $breakpoint-desktop) {
+         width: 100%;
+      }
+
+      .Title {
+         font-size: 36px;
+         font-weight: 500;
+         margin: 0;
+         color: $primary-color;
+      }
+
+      .Text {
+         margin: 0;
+         font-size: 18px;
+         color: $quaternary-color;
+         margin-top: 1vh;
+      }
+
+      .TagUl {
+         padding: 0;
+         margin-top: 2vh;
+         @media (max-width: $breakpoint-desktop) {
+            width: 100%;
+         }
+      }
+
+      .TagLi {
+         font-size: 14px;
+         font-weight: bold;
+         min-width: 115px;
+         display: inline-block;
+         background-color: $primary-color;
+         text-align: center;
+         color: $tertiary-color;
+         padding: 7px 20px;
+         border-radius: 10px;
+         margin: 0 20px 10px 0;
+         @media (max-width: $breakpoint-desktop) {
+            align-items: center;
+            padding: 7px 10px;
+            min-width: 0px;
+            font-size: 10px;
+         }
+      }
+   }
+
+   .Owner {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media (max-width: $breakpoint-desktop) {
+         flex-direction: row-reverse;
+         justify-content:space-between;
+         align-items: center;
+         width: 100%;
+      }
+      .Description {
+         display: flex;
+         align-items: center;
+         margin-bottom: 10px;
+         /**gap:10px;**/
+         .Name {
+            margin: 0;
+            width: 50%;
+            font-size: 18px;
+            font-weight: medium;
+            color: $primary-color;
+            text-align: right;
+         }
+
+         .Img {
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            margin: 0 0 0 30px;
+         }
+
+      }
+   }
+}
