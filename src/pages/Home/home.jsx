@@ -1,6 +1,8 @@
 import Banner from '../../components/Banner/banner';
+import Logement from '../../components/Logement/Logement';
 import imgHomeBanner from '../../assets/banner-home.png';
-import Card from '../../components/Card/card';
+import DataLocation from '../../datas/locations.json'
+
 
 // Page d'accueil > Contient une bannière, la galerie des locations proposées
 //
@@ -10,13 +12,16 @@ import Card from '../../components/Card/card';
 
 function Home() {
    return (
-      <section className='homeContainer'>
+      <div className='homeContainer'>
          <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs" />
          <div className='homeGaleryCards'>
-            <Card />
+            <section className='cardsContainer'>
+               {DataLocation.map((location) => (
+                  <Logement modeDisplay="card" location={location} />
+               ))}
+            </section>
          </div>
-      </section>
+      </div>
    )
- }
- 
+ } 
  export default Home

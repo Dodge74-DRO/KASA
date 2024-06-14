@@ -1,5 +1,5 @@
-@import '../../styles/utils/mixins.scss';
-@import '../../styles/utils/variables.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/variables.scss';
 
 .cardsContainer {
    display: flex;
@@ -62,12 +62,10 @@
          color: $tertiary-color;
          font-size: 18px;
          position: relative;
-         width: 240px;
-         text-align: center;
-
+         width: 80%;
+         text-align:center;
          bottom: 395px;
-         left: 20px;
-         margin: 0;
+         left: 30px;
 
          @media (max-width: $breakpoint-desktop) {
             bottom: 305px;

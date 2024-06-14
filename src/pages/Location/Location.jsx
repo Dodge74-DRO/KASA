@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './location.scss';
-import Error from '../Error/error';
+import Error from '../Error/Error';
 import Slider from '../../components/Slider/slider';
 import Rating from '../../components/Rating/Rating';
 import Collapse from '../../components/Collapse/Collapse'
@@ -20,16 +20,16 @@ import DataLocation from '../../datas/locations.json';
 // appel au composant SLIDER
 // appel au composant COLLAPSE
 
-function Logement() {
-   const [logement, setLogement] = useState(null); 
+function Location() {
+   const [logement, setLocation] = useState(null); 
    const { id } = useParams(); // Récupère l'id du logement dans l'url (référence HREF créer dans le composant CARD)
-// utilisation HOOK REACT 
+// utilisation HOOK REACT pour futur FETCH lorsque le BACKEND sera opérationnel
    useEffect(() => {  // Récupère les infos du logement selon l'id transmis
       const data = DataLocation.find(location => location.id === id); //rechercher dans le tableau la location choisie
       if (data) {                                                     // si existe
-      setLogement(data);
+      setLocation(data);
    } else { 
-      setLogement(null);                                              // reinitialisation de la zone si pas trouvé !
+      setLocation(null);                                              // reinitialisation de la zone si pas trouvé !
    }
    }, [id]);                                                          // useEffect se ré-exécutera si ID change
 
@@ -42,7 +42,7 @@ function Logement() {
          {/*si des images existent pour ce logement les affichés*/}
          {logement.pictures && <Slider images={logement.pictures} />}
 
-         <section className='logementContainer'>
+         <section className='locationContainer'>
 
             <div className='Infos'>
                <h1 className='Title'>{logement.title}</h1>
@@ -54,7 +54,7 @@ function Logement() {
                   ))}
                </ul>
             </div>
-            {/*création de mentions propriétaire*/}
+            {/*création des mentions propriétaire*/}
             <div className='Owner'>
                <div className='Description'>
                   <p className='Name'>{logement.host.name}</p>
@@ -66,12 +66,12 @@ function Logement() {
 
          </section>
          
-         <div className="logementCollapse">
-					<div className="logementCollapseContainer">
+         <div className="locationCollapse">
+					<div className="locationCollapseContainer">
                   {/*appel composant collapse*/}
                   <Collapse title={'Description'} content={logement.description}/>
 					</div>
-					<div className="logementCollapseContainer">
+					<div className="locationCollapseContainer">
                   {/*appel composant collapse*/}
 						<Collapse title={'Équipements'} content={logement.equipments}/>
 					</div>
@@ -82,4 +82,4 @@ function Logement() {
 }
 
 
-export default Logement;
+export default Location;

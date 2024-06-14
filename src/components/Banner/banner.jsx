@@ -5,8 +5,10 @@ import './banner.scss'
 function Banner({image,texte}) {
     return (
         <div className='bannerContainer'>
-            <img className='bannerImg' src={image} alt='Paysage' /> 
-            <p className='bannerText'>{texte}</p>
+            <img className='img' src={image} alt='Paysage' /> 
+            {texte !== "" && // si texte non vide, l'afficher
+                <p className='text'>{texte}</p>
+            }
         </div>
    )
  }
