@@ -6,15 +6,17 @@ import Full from './Full/Full'
 // Composant CARD > Génère les cartes de présentations des locations dans la page home
 // les éléments sont directement lus dans le tableau LOCATIONS.JSON
 
-function Logement(props) {
-   console.log(props,props.location.id,props.modeDisplay)
-      if (props.modeDisplay === "card") {
-         return (
-            <Card location={props.location} />
-         )
-      } else { 
-         <Full location={props.location} />
-      }
+function Logement({modeDisplay,location}) {
+   console.log(location.id, modeDisplay)
+   if (modeDisplay === "card") {
+      return (
+         <Card location={location} />
+      )
+   } else {
+      return (
+         <Full location={location} />
+      )
+   }
 }
 
 export default Logement
