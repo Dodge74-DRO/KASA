@@ -3,7 +3,7 @@ import './error.scss'
 
 // Page erreur 404 si une page n'existe pas !!!
 
-function Error() {
+export default function Error() {
    return (
       <div className='errorContainer'>
          <h1 className='TitleError'>404</h1>
@@ -14,5 +14,3 @@ function Error() {
       </div>
    )
  }
- 
- export default Error

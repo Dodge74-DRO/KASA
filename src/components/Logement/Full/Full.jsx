@@ -16,15 +16,12 @@ import Collapse from '../../../components/Collapse/Collapse'
 // appel au composant SLIDER
 // appel au composant COLLAPSE
 
-   function Full({location}) {
-      console.log(location.title)
-   return ( 
+export default function Full({ location }) {
+   return (
       <>
          {/*si des images existent pour ce location les affichés*/}
          {location.pictures && <Slider images={location.pictures} />}
-
          <section className='locationContainer'>
-
             <div className='Infos'>
                <h1 className='Title'>{location.title}</h1>
                <p className='Text'>{location.location}</p>
@@ -44,23 +41,17 @@ import Collapse from '../../../components/Collapse/Collapse'
                {/*appel composant notation*/}
                <Rating rating={location.rating} />
             </div>
-
          </section>
-         
          <div className="locationCollapse">
-					<div className="locationCollapseContainer">
-                  {/*appel composant collapse*/}
-                  <Collapse title={'Description'} content={location.description}/>
-					</div>
-					<div className="locationCollapseContainer">
-                  {/*appel composant collapse*/}
-						<Collapse title={'Équipements'} content={location.equipments}/>
-					</div>
-			</div>
-
+            <div className="locationCollapseContainer">
+               {/*appel composant collapse*/}
+               <Collapse title={'Description'} content={location.description} />
+            </div>
+            <div className="locationCollapseContainer">
+               {/*appel composant collapse*/}
+               <Collapse title={'Équipements'} content={location.equipments} />
+            </div>
+         </div>
       </>
-  );
+   );
 }
-
-
-export default Full;

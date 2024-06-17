@@ -6,20 +6,11 @@ import DataLocation from '../../datas/locations.json';
 import Logement from '../../components/Logement/Logement';
 
 
-// Page Logement avec 
-// - slider
-// - titre
-// - lieu
-// - nom et photo du propriétaire
-// - tags tourisme / type de logement
-// - notation
-// - descriptions du logement
-// - équipements proposés
-//
-// appel au composant SLIDER
-// appel au composant COLLAPSE
+// Page Location
+// récupère les éléments d'un logement pour affichage en plein écran
+// - appel de la fonction LOPGEMENT en mode FULL
 
-function Location() {
+export default function Location() {
    const [location, setLocation] = useState(null);
    const { id } = useParams(); // Récupère l'id du logement dans l'url (référence HREF créer dans le composant CARD)
    console.log(id)
@@ -43,6 +34,3 @@ function Location() {
       </>
    );
 }
-
-
-export default Location;

@@ -11,7 +11,7 @@ import DataCollapse from '../../datas/about.json'
 // appel au composant BANNER : bannière avec image et texte si pas vider
 // création des collapse : pour afficher ou masque les contenus 
 
-function About() {
+export default function About() {
    return (
       <section className='aboutContainer'>
          <Banner image={imgAboutBanner} texte="" />
@@ -27,5 +27,3 @@ function About() {
       </section>
    )
  }
- 
- export default About

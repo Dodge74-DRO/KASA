@@ -5,7 +5,7 @@ import StarInactive from '../../assets/star-inactive.png';
 // composant RATING : NOTATION créer 1 composant avec 5 étoiles colorés ou vides selon selon les PROPS transmis
 // Props RATING : notation (note de 1 à 5)
 
-function Rating({ rating }) { 
+export default function Rating({ rating }) { 
    const stars = []; // Creer un tableau pour stocker les étoiles
  
    for (let i = 1; i <= 5; i++) { // Boucle pour afficher les étoiles
@@ -18,4 +18,3 @@ function Rating({ rating }) {
 
    return <div>{stars}</div>; // Retourne les etoiles
 }
-export default Rating;

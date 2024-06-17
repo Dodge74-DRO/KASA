@@ -4,7 +4,7 @@ import './card.scss'
 // Composant CARD > Génère les cartes de présentations des locations dans la page home
 // les éléments sont directement lus dans le tableau LOCATIONS.JSON
 
-function Card({location}) {
+export default function Card({location}) {
    console.log(location.title)
    return (
       <figure className='card'>
@@ -17,4 +17,3 @@ function Card({location}) {
       </figure>
    )
 }
-export default Card

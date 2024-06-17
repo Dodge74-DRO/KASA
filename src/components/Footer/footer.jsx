@@ -3,7 +3,8 @@ import './footer.scss'
 import LogoFooter from '../../assets/logo-footer.png'
 
 // FOOTER avec logo et texte (idem sur toutes les pages du site)
-function Footer() {
+
+export default function Footer() {
    return (
       <footer className='footerContainer'>
          <Link to="/">
@@ -14,7 +15,4 @@ function Footer() {
          </div>
       </footer>
    )
- }
- 
- export default Footer
- 
+ } 

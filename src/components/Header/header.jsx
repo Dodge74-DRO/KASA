@@ -2,9 +2,10 @@ import { Link, NavLink } from 'react-router-dom'
 import './header.scss'
 import Logo from '../../assets/logo.png'
 
-// HEADERR avec logo et barre de navigation (idem sur toutes les pages du site) sauf soulignement du lien de la page en cours
+// HEADER avec logo et barre de navigation (idem sur toutes les pages du site) 
+// sauf soulignement du lien de la page en cours
 
-function Header() {
+export default function Header() {
    return (
       <nav className='headerContainer'>
          <Link to="/">
@@ -20,6 +21,4 @@ function Header() {
          </div>
       </nav>
    )
- }
- 
- export default Header
+}

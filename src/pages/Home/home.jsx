@@ -10,7 +10,7 @@ import DataLocation from '../../datas/locations.json'
 // appel au composant CARD   : création des cartes des locations 
 //
 
-function Home() {
+export default function Home() {
    return (
       <div className='homeContainer'>
          <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs" />
@@ -23,5 +23,4 @@ function Home() {
          </div>
       </div>
    )
- } 
- export default Home
+ }

@@ -6,7 +6,7 @@ import ArrowLeft from '../../assets/arrow-left.png';
 // composant SLIDER : créer 1 diaporama d'images de la location choisie selon la liste d'images transmis en PROPS
 // SLIDER avec compteur et flèches de navigation et défilement infini sur le carrousel
 
-function Slider({ images }) { 
+export default function Slider({ images }) { 
    const [currentIndex, setCurrentIndex] = useState(0); // State > Index de l'image actuelle
 
    function nextImage() { // Passe a l'image suivante
@@ -40,5 +40,3 @@ function Slider({ images }) {
       </section>
    )
 }
-
-export default Slider;
