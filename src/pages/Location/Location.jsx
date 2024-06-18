@@ -8,12 +8,11 @@ import Logement from '../../components/Logement/Logement';
 
 // Page Location
 // récupère les éléments d'un logement pour affichage en plein écran
-// - appel de la fonction LOPGEMENT en mode FULL
+// - appel de la fonction LOGEMENT en mode FULL
 
 export default function Location() {
    const [location, setLocation] = useState(null);
    const { id } = useParams(); // Récupère l'id du logement dans l'url (référence HREF créer dans le composant CARD)
-   console.log(id)
    // utilisation HOOK REACT pour futur FETCH lorsque le BACKEND sera opérationnel
    useEffect(() => {  // Récupère les infos du logement selon l'id transmis
       const data = DataLocation.find(location => location.id === id); //rechercher dans le tableau la location choisie
@@ -24,7 +23,7 @@ export default function Location() {
       }
    }, [id]);                                                          // useEffect se ré-exécutera si ID change
 
-   if (!location) { // Si l'id n'existe pas, affiche la page d'erreur
+   if (!location) { // LOCATION.JSX Si l'id n'existe pas, affiche la page d'erreur
       return (<Error />);
    }
 

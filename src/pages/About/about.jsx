@@ -3,7 +3,6 @@ import Collapse from '../../components/Collapse/Collapse'
 import './about.scss';
 import imgAboutBanner from '../../assets/banner-about.png'
 import DataCollapse from '../../datas/about.json'
-// ajout du lien vers page d'erreur sur la bannière
 
 // Page à propos > Contient une bannière et renseignements sur Kasa
 // récupère les éléments à transmettre pour la création des collapses dans DATAS/ABOUT.JSON 
