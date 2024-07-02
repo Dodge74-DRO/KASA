@@ -13,14 +13,14 @@ const DefaultRouter = () => {
       <BrowserRouter>
       <Header />
       <main className='pageContenair'>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/location/:id" element={<Location />} />
-              <Route path="/About" element={<About />} />
-              <Route path="*" element={<Error />} />
-            </Routes>
-            </main>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/location/:id" element={<Location />} />
+          <Route path="/About" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
  )
 }
