@@ -16,8 +16,8 @@ export default function Home() {
          <Banner image={imgHomeBanner} texte="Chez vous, partout et ailleurs" />
          <div className='homeGaleryCards'>
             <section className='cardsContainer'>
-               {DataLocation.map((location) => (
-                  <Logement modeDisplay="card" location={location} />
+               {DataLocation.map((location,index) => (
+                  <Logement key={index} modeDisplay="card" location={location} />
                ))}
             </section>
          </div>

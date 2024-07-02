@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './location.scss';
 import Error from '../Error/Error';
 import DataLocation from '../../datas/locations.json';
 import Logement from '../../components/Logement/Logement';

@@ -1,4 +1,3 @@
-import './logement.scss'
 import Card from './Card/Card'
 import Full from './Full/Full'
 
